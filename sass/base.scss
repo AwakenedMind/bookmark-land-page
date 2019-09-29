@@ -1,0 +1,29 @@
+/*animations, base, typography, utilities (media queries)
+
+font*/
+$font: 'Rubik', sans-serif;
+$light: 400;
+$heavy: 500;
+
+/*colors*/
+/*primary*/
+$soft-blue: hsl(231,69%, 60%);
+$soft-red: hsl(0, 94%,66%);
+
+/*neutral*/
+$grayblue: hsl(229, 8%, 60%);
+$darkblue: hsl(229, 31%, 21%);
+
+/*typography*/
+$fsize: 18px;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+      font-family: $font;
+  }
