@@ -1,1 +1,91 @@
 // Header navigation features
+@import 'abstracts';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0 2em;
+    align-items: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $darkblue;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.login {
+    @include sml-btn;
+    @include btn-shadow;
+    background-color: $soft-red;
+    color: hsl(0, 0, 100%);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-section-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.main-section {
+    grid-column-start: 1;
+    padding-top: 80px;
+
+    h1 {
+        @include heading;
+        font-size: 3.1em;
+        width: 70%;
+        padding-bottom: .4em;
+    }
+
+    p {
+        @include grey-font;
+        padding-bottom: .8em;
+    }
+}
+
+.heroimg {
+    grid-column-start: 2;
+}
+
+.main-btn {
+    @include sml-btn;
+    font-weight: bold;
+    @include btn-shadow;
+}
+
+.btn_chrome {
+    background-color: $soft-blue;
+    color: hsl(0, 0, 100%);
+}
+
+.btn_firefox {
+    color: $soft-blue;
+}
+
+.feature-section-wrapper_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
