@@ -28,13 +28,15 @@
     background-color: $soft-red;
     color: hsl(0, 0, 100%);
     text-transform: uppercase;
-    border: 2px solid $soft-red;
+    @include border-btn;
+    border-color: $soft-red;
 }
 
 .login:hover {
     @include btnhover;
     color: $soft-red;
-    border: 2px solid $soft-red;
+    @include border-btn;
+    border-color: $soft-red;
 }
 
 .main-section-wrapper {
@@ -70,12 +72,14 @@
     @include sml-btn;
     background-color: $soft-blue;
     color: hsl(0, 0, 100%);
-    border: 2px solid $soft-blue;
+    @include border-btn;
+    border-color: $soft-blue;
 }
 
 .btn_chrome:hover {
     @include btnhover;
-    border: 2px solid $soft-blue;
+    @include border-btn;
+    border-color: $soft-blue;
     color: $soft-blue;
 }
 
@@ -87,7 +91,8 @@
 
 .btn_firefox:hover {
     @include btnhover;
-    border: 2px solid $darkblue;
+    @include border-btn;
+    border-color: $darkblue;
     
 }
 

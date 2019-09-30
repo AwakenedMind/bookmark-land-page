@@ -96,3 +96,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+@mixin border-btn {
+  border: 2px solid;
+}
