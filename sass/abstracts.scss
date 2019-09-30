@@ -59,6 +59,13 @@
     align-items: center;
 }
 
+@mixin flexbox-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin feature-tab-mix {
   h1 {
     @include sub-header;
