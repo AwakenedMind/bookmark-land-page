@@ -2,6 +2,10 @@
 
 /*extension, FAQ, footer*/
 
+
+
+
+
 .faq {
   height: 900px;
   display: flex;
@@ -19,7 +23,7 @@
 
 .faq-header {
   font-size: 1.6em;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .faq-subheader {
@@ -47,6 +51,30 @@
   padding-bottom: 18px;
   color: $darkblue;
   font-weight: $light;
+  width: fit-content;
+  white-space: nowrap;
+  
+}
+
+.faq-question-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+
+}
+
+.faq-arrow-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+.faq-arrow {
+  max-width: 18px;
+  max-height: 12px;
 }
 
 .faq-answer {
@@ -54,11 +82,18 @@
   
 }
 
+.faq-hr {
+  background-color: $grayblue; 
+  height: 1px; 
+  border: 0;
+}
+
 .faq-button {
   margin-top: 3rem;
   @include sml-btn;
   background: $soft-red;
   color: white;
+  
 }
 
 .contact {
