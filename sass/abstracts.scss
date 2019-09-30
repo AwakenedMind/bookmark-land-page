@@ -1,0 +1,22 @@
+@mixin xlrg-btn {
+  border: none;
+  display: inline-block;
+  padding: 10px 50px;
+  text-decoration: none;
+  font-size: $sml-font;
+}
+
+@mixin card {
+  height: 500px;
+  width: 250px;
+  box-shadow: 0 0 1rem $grayblue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin card-heading {
+    font-weight: $heavy;
+    color: $grayblue;
+    font-size: 1.2em;
+}
