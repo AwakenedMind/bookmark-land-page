@@ -25,10 +25,16 @@
 
 .login {
     @include sml-btn;
-    @include btn-shadow;
     background-color: $soft-red;
     color: hsl(0, 0, 100%);
     text-transform: uppercase;
+    border: 2px solid $soft-red;
+}
+
+.login:hover {
+    @include btnhover;
+    color: $soft-red;
+    border: 2px solid $soft-red;
 }
 
 .main-section-wrapper {
@@ -61,18 +67,29 @@
     grid-column-start: 2;
 }
 
-.main-btn {
-    @include sml-btn;
-    @include btn-shadow;
-}
-
 .btn_chrome {
+    @include sml-btn;
     background-color: $soft-blue;
     color: hsl(0, 0, 100%);
+    border: 2px solid $soft-blue;
+}
+
+.btn_chrome:hover {
+    @include btnhover;
+    border: 2px solid $soft-blue;
+    color: $soft-blue;
 }
 
 .btn_firefox {
+    @include sml-btn;
     color: $darkblue;
+    background-color: #ffff;
+}
+
+.btn_firefox:hover {
+    @include btnhover;
+    border: 2px solid $darkblue;
+    
 }
 
 .feature-section {
@@ -104,6 +121,11 @@
         color: $grayblue;
         border-bottom: 1px solid $grayblue;
         cursor: pointer;
+    }
+
+    li:hover{
+        color: $soft-red;
+        border-bottom: 1px solid $soft-red;
     }
 }
 
