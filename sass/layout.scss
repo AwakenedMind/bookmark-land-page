@@ -29,7 +29,6 @@
     background-color: $soft-red;
     color: hsl(0, 0, 100%);
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 .main-section-wrapper {
@@ -64,7 +63,6 @@
 
 .main-btn {
     @include sml-btn;
-    font-weight: bold;
     @include btn-shadow;
 }
 
@@ -77,12 +75,36 @@
     color: $soft-blue;
 }
 
-.feature-section-wrapper_1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.feature-section {
+    text-align: center;
+    margin: 0 auto;
+
+    h1 {
+        color: $darkblue;
+        padding-bottom: 1em;
+    }
+
+    p {
+        color: $grayblue;
+        padding-bottom: 1em;
+        width: 30%;
+        margin: 0 auto;
+    }
 }
 
+.features-list {
+
+    ul {
+        @include flexbox-center;
+    }
+
+    li {
+        list-style-type: none;
+        padding: 1em 5em;
+        color: $grayblue;
+        border-bottom: 1px solid $grayblue;
+    }
+}
 
 
 
