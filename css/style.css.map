@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/base.scss","../sass/bot-layout.scss","../sass/abstracts.scss"],"names":[],"mappings":"AAAA;;AAAA;AAOA;AACA;AAIA;AAIA;AAIA;EACI;EACA;EACA;;;AAGF;EACI,aAxBC;EAyBD,WAXE;;;ACjBR;ACAA","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/base.scss","../sass/bot-layout.scss","../sass/abstracts.scss"],"names":[],"mappings":"AAAA;;AAAA;AAOA;AACA;AAIA;AAIA;AAIA;EACI;EACA;EACA;;;AAGF;EACI,aAxBC;EAyBD,WAXK;;;ACjBX;ACuBA","file":"style.css"}
