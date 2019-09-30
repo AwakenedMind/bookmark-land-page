@@ -21,19 +21,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15px;
 }
 
 .nav-links {
   display: flex;
   list-style-type: none;
   padding: 0 2em;
+  align-items: center;
 }
 
 .nav-item a {
   text-decoration: none;
   text-transform: uppercase;
   color: #252b46;
-  padding: 10px 20px;
+  padding: 20px 20px;
+  align-items: center;
 }
 
 .login {
@@ -43,6 +46,74 @@ body {
   text-decoration: none;
   font-size: 0.8em;
   cursor: pointer;
+  border-radius: 4px;
+  -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.32);
+  box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.32);
+  background-color: #fa5757;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main-section-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.main-section {
+  grid-column-start: 1;
+  padding-top: 80px;
+}
+.main-section h1 {
+  color: #252b46;
+  font-weight: 500;
+  font-size: 3.1em;
+  width: 70%;
+  padding-bottom: 0.4em;
+}
+.main-section p {
+  font-weight: 400;
+  color: #9194a1;
+  font-size: 1.1em;
+  padding-bottom: 0.8em;
+}
+
+.heroimg {
+  grid-column-start: 2;
+}
+
+.main-btn {
+  border: none;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 0.8em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.32);
+  box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.32);
+}
+
+.btn_chrome {
+  background-color: #5368df;
+  color: white;
+}
+
+.btn_firefox {
+  color: #5368df;
+}
+
+.feature-section-wrapper_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*extension, FAQ, footer*/
