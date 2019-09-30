@@ -92,3 +92,7 @@
   background: hsl(0, 0, 100%);
 }
 
+@mixin grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

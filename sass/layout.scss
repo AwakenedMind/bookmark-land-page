@@ -38,8 +38,7 @@
 }
 
 .main-section-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    @include grid-layout;
     grid-column-gap: 50px;
     width: 80%;
     margin: 0 auto;
@@ -130,8 +129,7 @@
 }
 
 .feature-tab-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include grid-layout;
     margin: 0 auto;
     width: 50%;
     grid-gap: 10%;
