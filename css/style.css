@@ -1,21 +1,18 @@
-/*animations, base, typography, utilities (media queries)
+/* Error: Undefined variable.
+ *    ,
+ * 29 |       font-size: $fsize;
+ *    |                  ^^^^^^
+ *    '
+ *   sass\base.scss 29:18  @import
+ *   sass\style.scss 1:9   root stylesheet */
 
-font*/
-/*colors*/
-/*primary*/
-/*neutral*/
-/*typography*/
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 29 \2502        font-size: $fsize;\d\a    \2502                   ^^^^^^\a    \2575 \a   sass\\base.scss 29:18  @import\a   sass\\style.scss 1:9   root stylesheet";
 }
-
-body {
-  font-family: "Rubik", sans-serif;
-  font-size: 18px;
-}
-
-/*extension, FAQ, footer*/
-
-/*# sourceMappingURL=style.css.map */
