@@ -72,7 +72,7 @@
 }
 
 .btn_firefox {
-    color: $soft-blue;
+    color: $darkblue;
 }
 
 .feature-section {
@@ -106,7 +106,44 @@
     }
 }
 
+.feature-tab-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 50%;
+    grid-gap: 10%;
+    padding-top: 40px;
+}
 
+.feature-tab-1 {
+    @include feature-tab-mix;
+    display: none;
+}
+
+.featured-img {
+    @include feature-img;
+    display: none;
+}
+
+.feature-tab-2 {
+    @include feature-tab-mix;
+    display: none;
+}
+
+.featured-img-2 {
+    @include feature-img;
+    display: none;
+}
+
+.feature-tab-3 {
+    @include feature-tab-mix;
+    // display: none;
+}
+
+.featured-img-3 {
+    @include feature-img;
+    // display: none;
+}
 
 
 
