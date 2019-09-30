@@ -23,9 +23,10 @@
 }
 
 .faq-subheader {
-  color: $grayblue;
   text-align: center;
   margin-bottom: 3rem;
+  color: $grayblue;
+
 }
 
 .faq-list {
@@ -42,9 +43,10 @@
 }
 
 .faq-question {
-  padding-top: 14px;
-  padding-bottom: 14px;
-  font-weight: 400;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: $darkblue;
+  font-weight: $light;
 }
 
 .faq-answer {
