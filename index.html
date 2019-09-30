@@ -19,7 +19,7 @@
 </head>
 
 <body>
- <nav class="navbar">
+  <nav class="navbar">
     <img src="./images/logo-bookmark.svg" alt="logo">
     <ul class="nav-links">
       <li class="nav-item"><a href="#!">Features</a></li>
@@ -27,20 +27,20 @@
       <li class="nav-item"><a href="#!">Contact</a></li>
       <li class="nav-item"><button class="login">login</button></li>
     </ul>
- </nav>
-  
- <div class="main-section-wrapper">
-   <div class="main-section">
+  </nav>
+
+  <div class="main-section-wrapper">
+    <div class="main-section">
       <h1>A simple Bookmark Manager</h1>
-    <p> A clean and simple interface to organize your favourite websites. Open a new 
+      <p> A clean and simple interface to organize your favourite websites. Open a new
         browser tab and see your sites load instantly. Try it for free.</p>
-        <button class="main-btn btn_chrome">Get it on Chrome</button>
-        <button class="main-btn btn_firefox">Get it on Firefox</button>
+      <button class="main-btn btn_chrome">Get it on Chrome</button>
+      <button class="main-btn btn_firefox">Get it on Firefox</button>
+    </div>
+    <div class="heroimg">
+      <img src="./images/illustration-hero.svg" alt="illustration hero">
+    </div>
   </div>
-        <div class="heroimg">
-          <img src="./images/illustration-hero.svg" alt="illustration hero">
-        </div>
- </div>
 
 
   <div class="feature-section-wrapper">
@@ -97,33 +97,47 @@
      
 
   <!-- Download Extensions Sections-->
-  <section>
-    <h3>Download the Extensions</h3>
-    <div> We’ve got more browsers in the pipeline. Please do let us know if you’ve
-      got a favourite you’d like us to prioritize.</div>
-    <ul>
-      <li>
-        <img src="./images/logo-chrome.svg" />
-        <h4>Add to Chrome</h4>
-        <p>Minimum version 62</p>
-        <p> Add & Install Extension
-        </p>
-      </li>
-      <li>
-        <img src="./images/logo-firefox.svg" />
-        <h4>Add to Firefox</h4>
-        <p>Minimum version 55</p>
-        <p> Add & Install Extension
-        </p>
-      </li>
-      <li>
-        <img src="./images/logo-opera.svg" />
-        <h4>Add to Opera</h4>
-        <p>Minimum version 62</p>
-        <p> Add & Install Extension
-        </p>
-      </li>
-    </ul>
+  <section class="download-ext">
+    <div class="download-ext-wrapper">
+      <h3 class="download-ext-header">
+        Download the Extensions
+      </h3>
+      <div class="download-ext-subheader">
+        We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        got a favourite you’d like us to prioritize.
+      </div>
+      <ul class="download-ext-cardlist">
+        <li class="download-ext-card">
+          <img src="./images/logo-chrome.svg" class="download-ext-card-img" />
+          <h4 class="download-ext-card-header">Add to Chrome</h4>
+          <p class="download-ext-card-description">Minimum version 62</p>
+          <img src="./images/bg-dots.svg" class="download-ext-card-dots" />
+          <button class="download-ext-card-button">
+            Add & Install Extension
+          </button>
+        </li>
+        <li class="download-ext-card">
+          <img src="./images/logo-firefox.svg" class="download-ext-card-img" />
+          <h4 class="download-ext-card-header">Add to Firefox</h4>
+          <p class="download-ext-card-description">Minimum version 55</p>
+          <img src="./images/bg-dots.svg" class="download-ext-card-dots" />
+
+          <button class="download-ext-card-button">
+            Add & Install Extension
+          </button>
+        </li>
+        <li class="download-ext-card">
+          <img src="./images/logo-opera.svg" class="download-ext-card-img" />
+          <h4 class="download-ext-card-header">Add to Opera</h4>
+          <p class="download-ext-card-description">Minimum version 62</p>
+          <img src="./images/bg-dots.svg" class="download-ext-card-dots" />
+
+          <button class="download-ext-card-button">
+            Add & Install Extension
+          </button>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="faq">
@@ -135,49 +149,79 @@
         Here are some of our FAQs. If you have any other questions you’d like
         answered please feel free to email us.
       </div>
-      <div>
-        <h4>
-          What is Bookmark?
-        </h4>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-          justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-        </div>
-      </div>
-      <div>
-        <h4>
-          How can I request a new browser?
 
-        </h4>
-        <div>
-          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-          Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-          ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-        </div>
-      </div>
-      <div>
-        <h4>
-          Is there a mobile app?
+      <ul class="faq-list">
+        <li class="faq-list-item">
+          <hr class="faq-hr">
+          <div class="faq-question-wrapper">
+            <h4 class="faq-question">
+              What is Bookmark?
+            </h4>
+            <div class="faq-answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+              justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+            </div>
+            <div class="faq-arrow-wrapper">
+              <img src="images/icon-arrow.svg" class="faq-arrow" />
+            </div>
+          </div>
+          <hr class="faq-hr">
+        </li>
 
-        </h4>
-        <div>
-          Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
-          urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
-          sollicitudin ex et ultricies bibendum.
-        </div>
-      </div>
-      <div>
-        <h4>
-          What about other Chromium browsers?
+        <li class="faq-list-item">
+          <div class="faq-question-wrapper">
 
-        </h4>
-        <div>
-          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
-          vitae neque eget nisl gravida pellentesque non ut velit.
-        </div>
-      </div>
-      <button>More Info</button>
+            <h4 class="faq-question">
+              How can I request a new browser?
+            </h4>
+            <div class="faq-answer">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+              ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </div>
+            <div class="faq-arrow-wrapper">
+              <img src="images/icon-arrow.svg" class="faq-arrow" />
+            </div>
+          </div>
+          <hr class="faq-hr">
+        </li>
+        <li class="faq-list-item">
+          <div class="faq-question-wrapper">
+
+            <h4 class="faq-question">
+              Is there a mobile app?
+            </h4>
+            <div class="faq-answer">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+              urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </div>
+            <div class="faq-arrow-wrapper">
+              <img src="images/icon-arrow.svg" class="faq-arrow" />
+            </div>
+          </div>
+          <hr class="faq-hr">
+        </li>
+        <li class="faq-list-item">
+          <div class="faq-question-wrapper">
+
+            <h4 class="faq-question">
+              What about other Chromium browsers?
+            </h4>
+            <div class="faq-answer">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+              vitae neque eget nisl gravida pellentesque non ut velit.
+            </div>
+            <div class="faq-arrow-wrapper">
+              <img src="images/icon-arrow.svg" class="faq-arrow" />
+            </div>
+          </div>
+          <hr>
+        </li>
+      </ul>
+      <button class="faq-button">More Info</button>
+
     </div>
   </section>
   <section class="contact">
