@@ -29,6 +29,10 @@
   cursor: pointer;
 }
 
+@mixin laptop-btn {
+  padding: 10px 5px;
+}
+
 @mixin grey-font {
   font-weight: $light;
   color: $grayblue;

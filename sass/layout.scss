@@ -11,6 +11,10 @@
     @include flexbox;
     list-style-type: $none;
     padding: 0 2em;
+
+    @media only screen and (max-width: 1440px) {
+        padding: 0 4em;
+    }
 }
 
 .nav-item a {
@@ -55,11 +59,21 @@
         font-size: 3.1em;
         width: 70%;
         padding-bottom: .4em;
+
+        
+    @media only screen and (max-width: 1024px) {
+        font-size: 2em;
+        }
     }
 
     p {
         @include grey-font;
         padding-bottom: .8em;
+
+        
+    @media only screen and (max-width: 1440px) {
+        font-size: $sml-font;
+        }
     }
 }
 
@@ -74,6 +88,11 @@
     @include border-btn;
     border-color: $soft-blue;
     @include border-radius(4px);
+
+    @media only screen and (max-width: 1024px) {
+        @include laptop-btn;
+        margin-bottom: .5em;
+        }
 }
 
 .btn_chrome:hover {
@@ -88,6 +107,10 @@
     color: $darkblue;
     background-color: #ffff;
     @include border-radius(4px);
+
+    @media only screen and (max-width: 1024px) {
+        @include laptop-btn;
+        }
 }
 
 .btn_firefox:hover {
@@ -111,6 +134,10 @@
         padding-bottom: 1em;
         width: 30%;
         margin: 0 auto;
+
+        @media only screen and (max-width: 1024px) {
+            width: 50%;
+            }
     }
 }
 
@@ -122,6 +149,10 @@
     @media screen and (max-width: 1440px) {
         width: 60%;
     }
+
+    @media only screen and (max-width: 1024px) {
+        width: 100%;
+        }
 }
 
 .tablinks {
@@ -153,6 +184,11 @@
     grid-gap: 10%;
     padding-top: 40px;
     display: none;
+
+    @media only screen and (max-width: 1024px) {
+        grid-gap: 5%;
+        width: 80%;
+        }
 }
 
 .featured-img {
