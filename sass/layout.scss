@@ -15,6 +15,11 @@
     @media only screen and (max-width: 1440px) {
         padding: 0 4em;
     }
+
+    @media only screen and (max-width: 768px) {
+        grid-gap: 5%;
+        width: 80%;
+        }
 }
 
 .nav-item a {
@@ -33,6 +38,11 @@
     @include border-btn;
     border-color: $soft-red;
     @include border-radius(4px);
+
+    
+    @media only screen and (max-width: 768px) {
+        @include laptop-btn;
+        }
 }
 
 .login:hover {
@@ -64,6 +74,11 @@
     @media only screen and (max-width: 1024px) {
         font-size: 2em;
         }
+
+        @media only screen and (max-width: 768px) {
+            font-size: 1.5em;
+            width: 100%;
+            }
     }
 
     p {
@@ -153,6 +168,10 @@
     @media only screen and (max-width: 1024px) {
         width: 100%;
         }
+
+    @media only screen and (max-width: 768px) {
+        width: 40%;
+        }
 }
 
 .tablinks {
@@ -185,19 +204,38 @@
     padding-top: 40px;
     display: none;
 
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        width: 100%;
+    }
+
     @media only screen and (max-width: 1024px) {
         grid-gap: 5%;
         width: 80%;
-        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        grid-gap: 2%;
+    }
 }
 
 .featured-img {
     grid-column-start: 1;
     grid-row-start: 1;
+
+    @media only screen and (max-width: 768px) {
+        grid-row-start: 1;
+    }
 }
 
 .content {
     grid-column-start: 2;
+
+    @media only screen and (max-width: 768px) {
+        grid-row-start: 2;
+    }
 
     h1 {
         padding: 1em 0em;
