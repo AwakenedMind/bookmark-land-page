@@ -1,243 +1,170 @@
 @import 'abstracts';
 
-/*extension, FAQ, footer*/
-
+/* Download Extension, FAQ, Footer Styles */
 
 .download-ext {
-  height: 100%;
-  // min-height: 900px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include margin(7rem);
+  @include height(100%);
+  @include flexbox;
 }
 
 .download-ext-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 70%;
-
+  @include flexbox-center-column;
+  @include width(70%)
 }
 
 .download-ext-header {
-  font-size: 1.5em;
+  @include font-size(1.6em);
   color: $darkblue;
-  padding-bottom: 2rem;
+  @include padding(0 0 2rem 0);
 }
 
 .download-ext-subheader {
-  text-align: center;
-  width: 500px;
+  @include text-align;
+  @include width(500px);
+  @include margin(0 0 2rem 0);
+  @include line-height(1.5);
   color: $grayblue;
-  margin-bottom: 5rem;
-  line-height: 1.5;
 }
 
 .download-ext-cardlist {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style-type: none;
-  // width: 70%;
-  width: fit-content;
-  height: 100%;
-
+  @include flexbox(space-evenly, center);
+  @include width(fit-content);
+  @include height(100%);
+  list-style-type: $none;
+  
   :nth-child(1) {
-    margin-top: -50px;
+    @include margin(-50px 0 0 0);
   }
 
   :nth-child(3) {
-    margin-top: 50px;
+    @include margin(50px 0 0 0);
+
   }
 }
 
 .download-ext-card {
-  box-shadow: 0 0 1rem $grayblue;
-  border-radius: 4px;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: fit-content;
-  padding: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  height: 100%;
-  min-height: 400px;
+  @include card;
 }
-
-.download-ext-card-img {
-  max-width: 105px;
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.download-ext-card-dots {
-  padding-bottom: 1rem;
-}
-
-.download-ext-header {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.download-ext-card-header {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: $darkblue;
-}
-
-.download-ext-card-description {
-  margin: 0 !important;
-  padding-bottom: 3rem;
-  color: $grayblue;
-  text-align: center;
-
-}
-
-.download-ext-card-button {
-  margin-top: 1rem;
-  @include sml-btn;
-  background: $soft-blue;
-  color: white;
-}
-
-
 
 .faq {
-  height: 900px;
+  @include margin(8rem 0 0 0);
+  @include height(100%);
   @include flexbox-center;
 }
 
 .faq-wrapper {
-  @include flexbox-center;
-  flex-direction: column;
-  width: 500px;
+  @include width(500px);
+  @include flexbox(center, center, column, nowrap);
+  @include padding(0 0 4rem 0);
 }
 
 .faq-header {
-  font-size: 1.6em;
-  margin-bottom: 2rem;
+  @include font-size(1.6em);
+  @include margin(0 0 2rem 0);
 }
 
 .faq-subheader {
-  text-align: center;
-  margin-bottom: 3rem;
+  @include text-align;
+  @include margin(0 0 3rem 0);
   color: $grayblue;
-
 }
 
 .faq-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  list-style-type: none;
-  width: 100%;
+  @include flexbox-center-column;
+  @include width(100%);
+  @include padding(0 0 2rem 0);
+  list-style-type: $none;
 }
 
 .faq-list-item {
-  width: 100%;
+  @include width(100%);
 }
 
 .faq-question {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  @include padding(18px 0 18px 0);
+  @include width(fit-content);
   color: $darkblue;
   font-weight: $light;
-  width: fit-content;
-  white-space: nowrap;
-  
+  white-space: $nowrap;
 }
 
 .faq-question-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-
+  @include flexbox(flex-start, center, row, nowrap)
 }
 
 .faq-arrow-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 2rem;
+  @include flexbox(flex-end, center);
+  @include width(100%);
+  @include margin(0 2rem 0 0);
 }
 
 .faq-arrow {
-  max-width: 18px;
-  max-height: 12px;
+  @include max-width(18px);
+  @include max-height(12px);
 }
 
 .faq-answer {
-  display: none;
-  
+  display: $none;
 }
 
 .faq-hr {
+  @include height(1px);
   background-color: $grayblue; 
-  height: 1px; 
-  border: 0;
 }
 
 .faq-button {
-  margin-top: 3rem;
+  @include padding(3rem 0 0 0);
   @include sml-btn;
   background: $soft-red;
-  color: white;
-  
+  color: $white;
 }
 
 .contact {
-  @include flexbox-center;
-  height: 500px;
+  @include flexbox;
+  @include height(500px);
   background: $soft-blue;
 }
 
 .contact-items-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  @include flexbox(center, center, column, wrap);
+  @include padding(1rem 1rem 1rem 1rem);
 }
 
 .contact-results {
-  text-transform: uppercase;
-  font-size: 0.6em;
-  color: white;
-  letter-spacing: 4px;
-  margin-bottom: 2rem;
-  text-align: center;
+  @include text-transform;
+  @include letter-spacing(4px);
+  @include margin(0 0 2rem 0);
+  @include text-align;
+  @include font-size(0.6em);
+  color: $white;
 }
 
 .contact-subheading {
-  font-size: 1.6em;
-  color: white;
-  margin-bottom: 2rem;
+  @include margin(0 0 2rem 0);
+  @include width(70%);
+  @include font-size(1.6em);
+  color: $white;
 }
 
 .contact-input-wrapper {
-  @include flexbox-center;
-  width: 100%;
+  @include flexbox;
+  @include width(100%);
 }
 
 .contact-input {
-  height: 40px;
-  width: 300px;
-  border-radius: 4px;
-  margin-right: 1rem;
-  border: none;
+  @include height(40px);
+  @include width(300px);
+  @include margin(0 1rem 0 0);
+  @include border-radius(4px);
+  border: $none;
 }
 
 .contact-button {
   @include sml-btn;
   border: 2px solid $soft-red;
   background: $soft-red;
-  color: white;
+  color: $white;
 }
 
 .contact-button:hover{
@@ -245,42 +172,39 @@
   color: $soft-red;
 }
 
-
 .footer {
-  @include flexbox-center;
-  width: 100vw;
-  height: 70px;
-  padding-right: 10%;
-  padding-left: 10%;
+  @include flexbox;
+  @include width(100vw);
+  @include height(70px);
+  @include padding(0 10% 0 10%);
   background: $darkblue;
 }
 
 .footer-nav {
   @include flexbox-center;
-  list-style-type: none;
+  list-style-type: $none;
 }
 
 .footer-nav li {
-  color: inherit;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding-right: 0.5rem;
-  padding-left:  0.5rem;
+  @include text-transform;
+  @include padding(0 0.5rem 0 0.5rem);
+  color: $inherit;
+  text-decoration: $none;
 }
 
 .footer-nav li a {
-  font-size: 0.8em;
+  @include text-transform;
+  @include font-size(0.8em);
   color: $grayblue;
-  text-decoration: none;
-  text-transform: uppercase;
+  text-decoration: $none;
 }
 
 .footer-social-media {
-  width: 100%;
+  @include width(100%);
   @include flexbox-center;
 }
 
 .footer-social-media img {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  @include padding(0 0.5rem 0 0);
+  @include padding(0 0 0 0.5rem);
 }
