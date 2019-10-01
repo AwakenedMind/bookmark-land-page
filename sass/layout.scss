@@ -2,21 +2,18 @@
 @import 'abstracts';
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 15px;
+    @include flexbox(space-between);
 }
 
 .nav-links {
-    display: flex;
-    list-style-type: none;
+    @include flexbox;
+    list-style-type: $none;
     padding: 0 2em;
-    align-items: center;
 }
 
 .nav-item a {
-    text-decoration: none;
+    text-decoration: $none;
     text-transform: uppercase;
     color: $darkblue;
     padding: 20px 20px;
@@ -116,11 +113,11 @@
 .features-list {
 
     ul {
-        @include flexbox-center;
+        @include flexbox; 
     }
 
     li {
-        list-style-type: none;
+        list-style-type: $none;
         padding: 1em 5em;
         color: $grayblue;
         border-bottom: 1px solid $grayblue;
@@ -143,22 +140,22 @@
 
 .feature-tab-1 {
     @include feature-tab-mix;
-    display: none;
+    display: $none;
 }
 
 .featured-img {
     @include feature-img;
-    display: none;
+    display: $none;
 }
 
 .feature-tab-2 {
     @include feature-tab-mix;
-    display: none;
+    display: $none;
 }
 
 .featured-img-2 {
     @include feature-img;
-    display: none;
+    display: $none;
 }
 
 .feature-tab-3 {
