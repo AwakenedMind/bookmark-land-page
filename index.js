@@ -1,15 +1,13 @@
-const tabItems = document.querySelectorAll('.tab-item');
-const tabContentItems = document.querySelectorAll('.tab-content-item');
-
-// Select tab content item
-function selectItem(e) {
-	// Remove all show and border classes
-	removeBorder();
-	removeShow();
-	// Add border to current tab item
-	this.classList.add('tab-border');
-	// Grab content item from DOM
-	const tabContentItem = document.querySelector(`#${this.id}-content`);
-	// Add show class
-	tabContentItem.classList.add('show');
-}
+function toggle(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }

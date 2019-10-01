@@ -110,64 +110,82 @@
     }
 }
 
-.features-list {
+.tab {
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+//     ul {
+//         @include flexbox; 
+//     }
 
-    ul {
-        @include flexbox; 
-    }
+//     li {
+//         list-style-type: $none;
+//         padding: 1em 5em;
+//         color: $grayblue;
+//         border-bottom: 1px solid $grayblue;
+//         cursor: pointer;
+//     }
 
-    li {
-        list-style-type: $none;
-        padding: 1em 5em;
-        color: $grayblue;
-        border-bottom: 1px solid $grayblue;
-        cursor: pointer;
-    }
-
-    li:hover{
-        color: $soft-red;
-        border-bottom: 1px solid $soft-red;
-    }
+//     li:hover{
+//         color: $soft-red;
+//         border-bottom: 1px solid $soft-red;
+//     }
 }
 
-.feature-tab-wrapper {
+.tablinks {
+    color: $grayblue;
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    padding: 1em 5em;
+    font-size: $sml-font;
+    border-bottom: 1px solid $grayblue;
+}
+
+.tablinks:hover {
+    color: $soft-red;
+    border-bottom: 2px solid $soft-red;
+}
+
+.tab button.active {
+    color: $soft-red;
+}
+
+.tabcontent {
     @include grid-layout;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     grid-gap: 10%;
     padding-top: 40px;
-}
-
-.feature-tab-1 {
-    @include feature-tab-mix;
-    display: $none;
+    display: none;
 }
 
 .featured-img {
-    @include feature-img;
-    display: $none;
+    grid-column-start: 1;
+    grid-row-start: 1;
 }
 
-.feature-tab-2 {
-    @include feature-tab-mix;
-    display: $none;
+.content {
+    grid-column-start: 2;
+
+    h1 {
+        padding: 1em 0em;
+        color: $darkblue;
+    }
+
+    p {
+        padding: 1em 0em;
+        @include grey-font;
+    }
 }
 
-.featured-img-2 {
-    @include feature-img;
-    display: $none;
+.btn-moreinfo {
+    @include sml-btn;
+    background: $soft-blue;
+    color: #ffff;
 }
 
-.feature-tab-3 {
-    @include feature-tab-mix;
-    // display: none;
+.tab {
+    overflow: hidden;
 }
-
-.featured-img-3 {
-    @include feature-img;
-    // display: none;
-}
-
-
-
-
