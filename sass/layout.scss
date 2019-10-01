@@ -114,22 +114,6 @@
     width: 50%;
     margin: 0 auto;
     overflow: hidden;
-//     ul {
-//         @include flexbox; 
-//     }
-
-//     li {
-//         list-style-type: $none;
-//         padding: 1em 5em;
-//         color: $grayblue;
-//         border-bottom: 1px solid $grayblue;
-//         cursor: pointer;
-//     }
-
-//     li:hover{
-//         color: $soft-red;
-//         border-bottom: 1px solid $soft-red;
-//     }
 }
 
 .tablinks {
@@ -186,6 +170,13 @@
     @include sml-btn;
     background: $soft-blue;
     color: #ffff;
+}
+
+.btn-moreinfo:hover {
+    @include btnhover;
+    @include border-btn;
+    border-color: $soft-blue;
+    color: $soft-blue;
 }
 
 .tab {
