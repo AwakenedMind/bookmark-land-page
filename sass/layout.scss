@@ -58,11 +58,24 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 60px;
+
+    @media only screen and (max-width: 425px) {
+        @include flexbox-center-column;
+        width: 70%;
+    }
+
+    @media only screen and (max-width: 425px) {
+        padding-top: 0px;
+    }
 }
 
 .main-section {
     grid-column-start: 1;
     padding-top: 80px;
+
+    @media only screen and (max-width: 425px) {
+       text-align: center;
+    }
 
     h1 {
         @include heading;
@@ -94,6 +107,10 @@
 
 .heroimg {
     grid-column-start: 2;
+
+    @media only screen and (max-width: 425px) {
+        grid-column-start: 1;
+    }
 }
 
 .btn_chrome {
@@ -153,6 +170,13 @@
         @media only screen and (max-width: 1024px) {
             width: 50%;
             }
+        @media only screen and (max-width: 425px) {
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 375px) {
+            width: 80%;
+        }
     }
 }
 
@@ -171,6 +195,14 @@
 
     @media only screen and (max-width: 768px) {
         width: 40%;
+        }
+
+        @media only screen and (max-width: 425px) {
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 375px) {
+            width: 100%;
         }
 }
 
@@ -219,8 +251,6 @@
 .featured-img {
     grid-column-start: 1;
     grid-row-start: 1;
-
-
 }
 
 .content {
@@ -232,15 +262,38 @@
         text-align: center;
     }
 
-
     h1 {
         padding: 1em 0em;
         color: $darkblue;
+
+    @media only screen and (max-width: 375px) {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        padding: .5em 0;
+         } 
+         
+    @media only screen and (max-width: 375px) {
+        width: 50%;
+        }
     }
 
     p {
         padding: 1em 0em;
         @include grey-font;
+
+        @media only screen and (max-width: 425px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+    
+    @media only screen and (max-width: 375px) {
+        width: 60%;
+        }
+
+        @media only screen and (max-width: 375px) {
+            width: 50%;
+            }
     }
 }
 
