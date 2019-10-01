@@ -136,6 +136,13 @@
   border-radius: 4px;
 }
 
+.faq-button:hover {
+  @include btnhover;
+  @include border-btn;
+  border-color: $soft-blue;
+  color: $soft-blue;
+}
+
 .faq-acc {
   background-color: #eee;
   color: #444;
