@@ -10,36 +10,35 @@
   height: 500px;
   width: 250px;
   box-shadow: 0 0 1rem $grayblue;
-  display: flex;
-  flex-direction: column;
+  @include flexbox-center-column;
   flex-wrap: wrap;
 }
 
 @mixin card-heading {
-    font-weight: $heavy;
-    color: $grayblue;
-    font-size: 1.2em;
+  font-weight: $heavy;
+  color: $grayblue;
+  font-size: 1.2em;
 }
 
 /* buttons */
 @mixin sml-btn{
-   display: inline-block;
-   padding: 10px 20px;
-   text-decoration: none;
-   font-size: $fontsize;
-   cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: $fontsize;
+  cursor: pointer;
 }
 
 @mixin grey-font {
-    font-weight: $light;
-    color: $grayblue;
-    font-size: $fontsize;
+  font-weight: $light;
+  color: $grayblue;
+  font-size: $fontsize;
 }
 
 @mixin sub-header {
-    font-size: $subheader;
-    color: $darkblue;
-    font-weight: $heavy;
+  font-size: $subheader;
+  color: $darkblue;
+  font-weight: $heavy;
 }
 
 @mixin heading {
@@ -49,14 +48,22 @@
 
 @mixin btn-shadow {
   -webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.32);
-    -moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.32);
-    box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.32);
+  -moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.32);
+  box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.32);
 }
 
 @mixin flexbox-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexbox($justify-content: center, $align-items: center, $flex-direction: row, $flex-wrap: nowrap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
 }
 
 @mixin flexbox-center-column {
@@ -64,6 +71,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 @mixin feature-tab-mix {
@@ -106,4 +114,100 @@
 
 @mixin border-btn {
   border: 2px solid;
+}
+
+@mixin card {
+  box-shadow: 0 0 1rem $grayblue;
+  border-radius: 4px;
+  padding: 1rem;
+  @include flexbox-center-column;
+  width: fit-content;
+  padding: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  @include height(100%);
+  min-height: 400px;
+
+  img:nth-child(1) {
+    @include max-width(105px);
+    @include margin-center;
+    @include padding(0 0 2rem 0);
+  }
+
+  h4 {
+    @include text-align;
+    @include padding(0 0 1rem 0);
+    color: $darkblue;
+  }
+
+  p {
+    margin: 0 !important;
+    @include padding(0 0 3rem 0);
+    color: $grayblue;
+    @include text-align;
+  }
+
+  button {
+    @include margin(1rem 0 0 0);
+    @include sml-btn;
+    background: $soft-blue;
+    color: $white;
+  }
+}
+
+// Size Mixins
+
+@mixin width($val) {
+  width: $val;
+}
+
+@mixin max-width($val) {
+  max-width: $val;
+}
+
+@mixin height($val) {
+  height: $val;
+}
+
+@mixin max-height($val) {
+  max-height: $val;
+}
+
+// Spacing Mixins
+
+@mixin margin($val) {
+  margin: $val;
+}
+
+@mixin margin-center {
+  margin: 0 auto;
+}
+
+@mixin padding($val) {
+  padding: $val;
+}
+
+@mixin border-radius($val) {
+  border-radius: $val;
+}
+
+// Typography Mixins 
+@mixin text-align($val: center) {
+  text-align: $val;
+}
+
+@mixin font-size($val) {
+  font-size: $val;
+}
+
+@mixin line-height($val) {
+  line-height: $val;
+}
+
+@mixin letter-spacing($val) {
+  letter-spacing: $val;
+}
+
+@mixin text-transform($val: uppercase) {
+  text-transform: $val;
 }
