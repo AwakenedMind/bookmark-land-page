@@ -49,6 +49,7 @@
       <h1>Features</h1>
       <p> Our aim is to make it quick and easy for you to access your favourite websites.
         Your bookmarks sync between your devices so you can access them on the go.</p>
+      
       <div class="tab">
         <!-- <ul>
           <li>Simple Bookmarking</li>
@@ -81,7 +82,6 @@
     </div>
     <img src="./images/illustration-features-tab-2.svg" class="featured-img" alt="Features tab img">
   </div>
-
   <div id="tab-3" class="tabcontent">
     <div class="content">
         <h1>Share your bookmarks</h1>
@@ -145,7 +145,63 @@
         Here are some of our FAQs. If you have any other questions you’d like
         answered please feel free to email us.
       </div>
-      <ul class="faq-list">
+
+      <div class="faq-list">
+        <hr class="faq-hr">
+        <button class="faq-acc-button">
+          What is Bookmark?
+          <div class="faq-arrow-wrapper">
+            <img src="images/icon-arrow.svg" class="faq-arrow" />
+          </div>
+        </button>
+        <div class="panel">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+          justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+        </div>
+        <hr class="faq-hr">
+        <button class="faq-acc-button">
+          How can I request a new browser?
+          <div class="faq-arrow-wrapper">
+            <img src="images/icon-arrow.svg" class="faq-arrow" />
+          </div>
+        </button>
+        <div class="panel">
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+          Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+          ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </div>
+        <hr class="faq-hr">
+        <button class="faq-acc-button">
+          Is there a mobile app?
+
+          <div class="faq-arrow-wrapper">
+            <img src="images/icon-arrow.svg" class="faq-arrow" />
+          </div>
+        </button>
+        <div class="panel">
+          Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+          urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+          sollicitudin ex et ultricies bibendum.
+        </div>
+        <hr class="faq-hr">
+        <button class="faq-acc-button">
+          What about other Chromium browsers?
+          <div class="faq-arrow-wrapper">
+            <img src="images/icon-arrow.svg" class="faq-arrow" />
+          </div>
+        </button>
+        <div class="faq-answer">
+          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+          vitae neque eget nisl gravida pellentesque non ut velit.
+        </div>
+        <hr class="faq-hr">
+
+      </div>
+
+
+
+      <!-- <ul class="faq-list">
         <li class="faq-list-item">
           <hr class="faq-hr">
           <div class="faq-question-wrapper">
@@ -210,7 +266,7 @@
           </div>
           <hr>
         </li>
-      </ul>
+      </ul> -->
       <button class="faq-button">More Info</button>
     </div>
   </section>
@@ -220,10 +276,10 @@
     <div class="contact-items-wrapper">
       <div class="contact-results">35,000 Already Joined</div>
       <div class="contact-subheading">Stay up-to-date with what we're doing</div>
-      <div class="contact-input-wrapper">
-        <input class="contact-input" />
-        <button class="contact-button">Contact Us</button>
-      </div>
+      <form name="contact-form" class="contact-input-wrapper" method="POST" onsubmit="return validateForm(e)">
+        <input class="contact-input" placeholder="Email" />
+        <button class="contact-button" type="submit">Contact Us</button>
+      </form>
     </div>
   </section>
 
@@ -263,4 +319,6 @@
   </footer>
 </body>
 <script src="index.js"></script>
+<script src="index2.js"></script>
+
 </html>
