@@ -27,6 +27,7 @@
     text-transform: uppercase;
     @include border-btn;
     border-color: $soft-red;
+    @include border-radius(4px);
 }
 
 .login:hover {
@@ -71,6 +72,7 @@
     color: hsl(0, 0, 100%);
     @include border-btn;
     border-color: $soft-blue;
+    @include border-radius(4px);
 }
 
 .btn_chrome:hover {
@@ -84,6 +86,7 @@
     @include sml-btn;
     color: $darkblue;
     background-color: #ffff;
+    @include border-radius(4px);
 }
 
 .btn_firefox:hover {
@@ -170,6 +173,7 @@
     @include sml-btn;
     background: $soft-blue;
     color: #ffff;
+    @include border-radius(4px);
 }
 
 .btn-moreinfo:hover {
