@@ -150,6 +150,8 @@
 
 .tab button.active {
     color: $soft-red;
+    border-bottom: 2px solid $soft-red;
+    font-weight: bold;
 }
 
 .tabcontent {

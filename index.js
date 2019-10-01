@@ -11,3 +11,5 @@ const toggle = (evt, feature) => {
     document.getElementById(feature).style.display = "grid";
     evt.currentTarget.className += " active";
   }
+
+  document.getElementById("defaultOpen").click();
