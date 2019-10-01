@@ -45,6 +45,7 @@
 
 .download-ext-card {
   @include card;
+  border-radius: 4px;
 }
 
 .faq {
@@ -140,7 +141,8 @@
   @include btnhover;
   @include border-btn;
   border-color: $soft-blue;
-  color: $soft-blue;
+  color: $soft-blue; 
+  border-radius: 4px;
 }
 
 .faq-acc {
@@ -154,7 +156,6 @@
   outline: none;
   font-size: 15px;
   transition: 0.4s;
-
   color: $darkblue;
   font-weight: $light;
 }
