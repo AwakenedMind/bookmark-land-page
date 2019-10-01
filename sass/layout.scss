@@ -265,3 +265,20 @@
 .tab {
     overflow: hidden;
 }
+
+.attribution {
+    color: hsl(0, 0, 100%);
+    text-align: center;
+    font-size: $sml-font;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(0, 0, 100%);
+}
+
+.attribution a:hover {
+    text-decoration: none;
+    color: $soft-red;
+}
+
