@@ -164,6 +164,7 @@
   transition: 0.4s;
   white-space: $nowrap;
   @include flexbox;
+  background: none;
 }
 
 .panel {
