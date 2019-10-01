@@ -1,5 +1,5 @@
-function toggle(evt, cityName) {
-    var i, tabcontent, tablinks;
+const toggle = (evt, cityName) => {
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
