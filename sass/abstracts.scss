@@ -12,6 +12,12 @@
   box-shadow: 0 0 1rem $grayblue;
   @include flexbox-center-column;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 768px) {
+    @include flexbox(center, space-evenly, column, wrap);
+    margin-bottom: 1rem;
+
+  }
 }
 
 @mixin card-heading {
@@ -126,7 +132,7 @@
   padding: 1rem;
   @include flexbox-center-column;
   width: fit-content;
-  padding: 1.5rem;
+  // padding: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   @include height(100%);
