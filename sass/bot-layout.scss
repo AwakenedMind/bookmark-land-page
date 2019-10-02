@@ -36,6 +36,10 @@
   @include font-size(2em);
   color: $darkblue;
   @include padding(0 0 2rem 0);
+
+  @media only screen and (max-width: 425px) {
+   text-align: center;
+  }
 }
 
 .download-ext-subheader {
@@ -148,6 +152,10 @@
   @include font-size(2em);
   @include margin(0 0 2rem 0);
   color: $darkblue;
+
+  @media only screen and (max-width: 425px) {
+    text-align: center;
+  }
 }
 
 .faq-subheader {
@@ -187,13 +195,13 @@
 .faq-arrow-wrapper {
   @include flexbox(flex-end, center);
   @include width(100%);
-  @include margin(0 2rem 0 0);
 }
 
 .faq-arrow {
   @include max-width(18px);
   @include max-height(12px);
 }
+
 .faq-arrow:hover {
   color: $soft-red;
   fill: $soft-red;
@@ -262,6 +270,11 @@
   white-space: $nowrap;
   @include flexbox;
   background: none;
+}
+
+.faq-acc-button.active {
+  color: $soft-red;
+  font-weight: bold;
 }
 
 .panel {
