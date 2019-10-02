@@ -13,3 +13,5 @@ const toggle = (evt, feature) => {
   }
 
   document.getElementById("defaultOpen").click();
+
+const dropdown = () => document.getElementById("myDropdown").classList.toggle("show");
