@@ -3,18 +3,37 @@
 /* Download Extension, FAQ, Footer Styles */
 
 .download-ext {
-  @include margin(7rem);
+  @include margin(7rem 0 0 0);
   @include height(100%);
+  @include width(100vw);
   @include flexbox;
 }
 
 .download-ext-wrapper {
   @include flexbox-center-column;
-  @include width(70%)
+  @include width(70%);
+  max-width: 1200px;
+
+  @media only screen and (max-width: 768px) {
+    @include width(100%);
+    @include flexbox(center, center, column, wrap);
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+    @include width(90%);
+
+    }
+
+    @media only screen and (max-width: 1440px) {
+      @include width(85%);
+  
+      }
+
 }
 
 .download-ext-header {
-  @include font-size(1.6em);
+  @include font-size(2em);
   color: $darkblue;
   @include padding(0 0 2rem 0);
 }
@@ -25,11 +44,16 @@
   @include margin(0 0 2rem 0);
   @include line-height(1.5);
   color: $grayblue;
+
+  @media only screen and (max-width: 768px) {
+    @include width(70%);
+
+  }
 }
 
 .download-ext-cardlist {
   @include flexbox(space-evenly, center);
-  @include width(fit-content);
+  @include width(100%);
   @include height(100%);
   list-style-type: $none;
   
@@ -41,29 +65,87 @@
     @include margin(50px 0 0 0);
 
   }
+
+  @media only screen and (max-width: 768px) {
+    @include flexbox(center, center, column, wrap);
+    height: 100%;
+
+    :nth-child(1) {
+      @include margin(25px 0 25px 0);
+    }
+  
+    :nth-child(3) {
+      @include margin(25px 0 25px 0);
+  
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    @include flexbox(center, center, column, wrap);
+    height: 100%;
+
+    :nth-child(1) {
+      @include margin(50px 0 50px 0);
+    }
+  
+    :nth-child(3) {
+      @include margin(50px 0 50px 0);
+  
+    }
+  }
 }
 
 .download-ext-card {
   @include card;
   border-radius: 4px;
+
+  // @media only screen and (max-width: 768px) {
+  //   @include width(100%);
+  //   @include flexbox(center, center, column, wrap);
+
+  // }
 }
 
 .faq {
-  @include margin(8rem 0 0 0);
+  // @include margin(8rem 0 0 0);
   @include height(100%);
   @include flexbox-center;
+
+  @media only screen and (max-width: 768px) {
+    @include margin(4rem 0 4rem 0);
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+    @include margin(4rem 0 4rem 0);
+  }
 }
 
 .faq-wrapper {
-  @include width(500px);
+  max-width: 500px;
+  width: 100%;
   @include height(100%);
   min-height: 800px;
   @include flexbox(center, center, column, nowrap);
   @include padding(0 0 4rem 0);
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+    min-height: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    height: 100%;
+    min-height: fit-content;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .faq-header {
-  @include font-size(1.6em);
+  @include font-size(2em);
   @include margin(0 0 2rem 0);
   color: $darkblue;
 }
@@ -135,6 +217,13 @@
   background: $soft-blue;
   color: $white;
   border-radius: 4px;
+  border: 2px solid transparent;
+
+  @media only screen and (max-width: 768px) {
+    @include margin(2rem 0 0 0);
+
+  }
+
 }
 
 .faq-button:hover {
@@ -180,17 +269,28 @@
   display: none;
   background-color: white;
   overflow: hidden;
+  color: $grayblue;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .contact {
   @include flexbox;
   @include height(500px);
   background: $soft-blue;
+
+  @media only screen and (max-width: 768px) {
+    @include height(100%);
+  }
 }
 
 .contact-items-wrapper {
   @include flexbox(center, center, column, wrap);
   @include padding(1rem 1rem 1rem 1rem);
+
+  @media only screen and (max-width: 768px) {
+    @include padding(3rem 3rem 3rem 3rem);
+  }
 }
 
 .contact-results {
@@ -213,15 +313,47 @@
 .contact-input-wrapper {
   @include flexbox;
   @include width(100%);
+
+  @media only screen and (max-width: 768px) {
+    @include flexbox-center-column;
+  }
 }
 
 .contact-input {
-  @include height(40px);
+  // @include height(100%);
+  padding: 10px 20px;
   @include width(300px);
   @include margin(0 1rem 0 0);
   @include border-radius(4px);
   border: $none;
+  position: relative;
+  outline: none;
+
+  @media only screen and (max-width: 768px) {
+    @include margin(0 0 0 0);
+    @include width(100%);
+  }
+
 }
+
+.contact-form {
+  position: relative;
+}
+
+.contact-placeholder {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  color: black;
+  padding: 0 20px;
+  // background-color: black;
+  // padding: 0 20px;
+}
+
+// .contact-input:focus ~ .contact-placeholder,
+// .contact-input:valid ~ .contact-placeholder {
+//   display: none;
+// }
 
 .contact-button {
   @include sml-btn;
@@ -229,6 +361,11 @@
   border-radius: 4px;
   background: $soft-red;
   color: $white;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 .contact-button:hover{
@@ -244,11 +381,40 @@
   @include height(70px);
   @include padding(0 10% 0 10%);
   background: $darkblue;
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+    @include flexbox-center-column;
+
+  }
+
+  @media screen and (max-width: 1440px) {
+    @include padding(0 8% 0 8%);
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+    @include padding(0 6% 0 6%);
+
+  }
 }
 
 .footer-nav {
   @include flexbox-center;
   list-style-type: $none;
+
+  :nth-child(1) {
+    padding-right: 2rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+    @include flexbox-center-column;
+    padding-top: 1rem;
+  }
+
 }
 
 .footer-nav li {
@@ -256,6 +422,11 @@
   @include padding(0 0.5rem 0 0.5rem);
   color: $inherit;
   text-decoration: $none;
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 1rem;
+
+  }
 }
 
 .footer-nav li a {
@@ -267,12 +438,26 @@
 
 .footer-social-media {
   @include width(100%);
+  width: fit-content;
   @include flexbox-center;
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-right: 2rem;
+    height: 100%;
+    @include flexbox(space-between, center);
+  }
 }
 
 .footer-social-media img {
-  @include padding(0 0.5rem 0 0);
-  @include padding(0 0 0 0.5rem);
+  @include padding(0 1.5rem 0 0);
+  @include padding(0 0 0 1.5rem);
+
+  @media only screen and (max-width: 768px) {
+    // @include padding(0 0.5rem 0 0.5rem);
+    // padding-right: 0.5rem;
+  }
 }
 
 .footer-social-media img:hover {
