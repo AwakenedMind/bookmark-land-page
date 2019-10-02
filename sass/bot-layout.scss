@@ -452,6 +452,10 @@
   text-decoration: $none;
 }
 
+.footer-nav li a:hover {
+  color: $soft-red;
+}
+
 .footer-social-media {
   @include width(100%);
   width: fit-content;
