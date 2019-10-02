@@ -66,7 +66,11 @@
     @media only screen and (max-width: 425px) {
         display: flex;
         justify-content: flex-end;
-        margin-left: 100vw;
+        padding-left: 100%;
+    }
+
+    @media only screen and (max-width: 320px){
+        padding-left: 50%;
     }
 }
 
@@ -86,8 +90,12 @@
         width: 70%;
     }
 
-    @media only screen and (max-width: 425px) {
-        padding-top: 0px;
+    @media only screen and (max-width: 375px) {
+        width: 85%;
+    }
+
+    @media only screen and (max-width: 320px) {
+        width: 100%;
     }
 }
 
@@ -99,6 +107,16 @@
         grid-row-start: 2;
         text-align: center;
         padding-bottom: 2em;
+    }
+
+    @media only screen and (max-width: 425px) {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 320px){
+        @include flexbox-center-column;
+        text-align: center;
+        padding: 20%;
     }
 
     h1 {
@@ -114,7 +132,11 @@
         @media only screen and (max-width: 768px) {
             font-size: 1.5em;
             width: 100%;
-            }
+        }
+        
+        @media only screen and (max-width: 320px) {
+             font-size: 1em;
+        }
     }
 
     p {
@@ -125,6 +147,11 @@
     @media only screen and (max-width: 1440px) {
         font-size: $sml-font;
         }
+
+        @media only screen and (max-width: 320px) {
+            font-size: 1em;
+
+       }
     }
 }
 
@@ -134,6 +161,12 @@
     @media only screen and (max-width: 768px) {
         grid-row-start: 1;
         grid-column-start: 1;
+    }
+
+    @media only screen and (max-width: 425px) {
+       img {
+        width: 100%;
+       }
     }
 }
 
@@ -270,6 +303,12 @@
         grid-gap: 2%;
         width: 70%;
     }
+
+    @media only screen and (max-width: 425px) {
+        img {
+         width: 80vw;
+        }
+     }
 }
 
 .featured-img {
@@ -290,16 +329,17 @@
         padding: 1em 0em;
         color: $darkblue;
 
+    @media only screen and (max-width: 425px) {
+        text-align: center;
+        }
+
     @media only screen and (max-width: 375px) {
         text-align: center;
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
         padding: .5em 0;
+        font-size: 1.5em;
          } 
-         
-    @media only screen and (max-width: 375px) {
-        width: 50%;
-        }
     }
 
     p {
@@ -307,17 +347,14 @@
         @include grey-font;
 
         @media only screen and (max-width: 425px) {
-            width: 70%;
+            width: 100%;
             margin: 0 auto;
+            padding: 0;
         }
     
     @media only screen and (max-width: 375px) {
-        width: 60%;
+        width: 100%;
         }
-
-        @media only screen and (max-width: 375px) {
-            width: 50%;
-            }
     }
 }
 
@@ -326,6 +363,10 @@
     background: $soft-blue;
     color: #ffff;
     @include border-radius(4px);
+
+    @media only screen and (max-width: 425px) {
+        margin-top: 1em;
+    }
 }
 
 .btn-moreinfo:hover {
