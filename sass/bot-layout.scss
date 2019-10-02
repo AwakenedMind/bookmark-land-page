@@ -39,6 +39,7 @@
 
   @media only screen and (max-width: 425px) {
    text-align: center;
+  font-size: 1.5em;
   }
 }
 
@@ -114,6 +115,7 @@
   // @include margin(8rem 0 0 0);
   @include height(100%);
   @include flexbox-center;
+  text-align: center;
 
   @media only screen and (max-width: 768px) {
     @include margin(4rem 0 4rem 0);
@@ -155,6 +157,7 @@
 
   @media only screen and (max-width: 425px) {
     text-align: center;
+    font-size: 1.5em;
   }
 }
 

@@ -139,6 +139,7 @@
 
     @media only screen and (max-width: 768px) {
         grid-column-gap: 10px;
+        font-size: 1.2em;
     }
 
     @media only screen and (max-width: 425px) {
@@ -191,14 +192,15 @@
             width: 100%;
         }
         
-        @media only screen and (max-width: 320px) {
-             font-size: 1em;
+        @media only screen and (max-width: 425px) {
+             font-size: 1.5em;
         }
     }
 
     p {
         @include grey-font;
         padding-bottom: .8em;
+        line-height: 1.5;
 
         
     @media only screen and (max-width: 1440px) {
@@ -273,6 +275,10 @@
     h1 {
         color: $darkblue;
         padding-bottom: 1em;
+
+        @media only screen and (max-width: 425px) {
+            font-size: 1.5em;
+       }
     }
 
     p {
@@ -280,6 +286,7 @@
         padding-bottom: 1em;
         width: 30%;
         margin: 0 auto;
+        line-height: 1.5;
 
         @media only screen and (max-width: 1024px) {
             width: 50%;
@@ -365,6 +372,17 @@
         img {
          width: 80vw;
         }
+     }
+
+     h1 {
+        @media only screen and (max-width: 425px) {
+            font-size: 1.5em;
+       }
+     }
+
+     p {
+         line-height: 1.5;
+         font-size: 1.1em;
      }
 }
 
