@@ -28,6 +28,10 @@
     color: $darkblue;
     padding: 20px 20px;
     align-items: center;
+
+    @media only screen and(max-width: 425px) {
+        display: none;
+    }
 }
 
 .login {
@@ -43,6 +47,10 @@
     @media only screen and (max-width: 768px) {
         @include laptop-btn;
         }
+    
+    @media only screen and(max-width: 425px) {
+        display: none;
+    }
 }
 
 .login:hover {
@@ -50,6 +58,16 @@
     color: $soft-red;
     @include border-btn;
     border-color: $soft-red;
+}
+
+.hamburger {
+    display: none;
+
+    @media only screen and (max-width: 425px) {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 100vw;
+    }
 }
 
 .main-section-wrapper {
@@ -81,10 +99,6 @@
         grid-row-start: 2;
         text-align: center;
         padding-bottom: 2em;
-    }
-
-    @media only screen and (max-width: 425px) {
-       text-align: center;
     }
 
     h1 {
@@ -119,10 +133,6 @@
 
     @media only screen and (max-width: 768px) {
         grid-row-start: 1;
-        grid-column-start: 1;
-    }
-
-    @media only screen and (max-width: 425px) {
         grid-column-start: 1;
     }
 }
