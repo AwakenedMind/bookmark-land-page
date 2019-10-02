@@ -77,19 +77,48 @@
 //dropdown btn
 .dropbtn {
     display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.dropdown-content {
-    display: none;
-}
+// on all screens besides mobile hide the dropdown
+.dropdown {
+        display: none;
+    }
 
 @media only screen and (max-width: 425px){ 
+
+    .logo {
+        // display: none;
+        // z-index: 100;
+    }
+
+    .light-logo {
+        padding-top: 1rem;
+        padding-left: 2rem;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
     .dropbtn {
     display: block;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 16px;
+    z-index: 100;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
     }
 
     //dropdown btn on hover & focus maybe add hover....
@@ -98,18 +127,40 @@
     }
 
     .dropdown {
-    position: relative;
-    display: inline-block;
+    // position: relative;
+    // display: inline-block;
+        display: block;
+    }
 
+    .dropdown-content-wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 50px;
+    }
+
+    .dropdown-hr {
+        height: 1px;
+        color: $grayblue;
+        background: $grayblue;
+        border: 0;
     }
 
     .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: $soft-blue;
-    color: hsl(0, 0, 100%);
-    z-index: 1;
-    width: 100%;
+        display: none;
+        position: absolute;
+        // background-color: $soft-blue;
+        // background-color: rgba(83, 104, 223, 0.9);
+        background-color: rgba(37, 43, 70, 0.9);
+        color: hsl(0, 0, 100%);
+        z-index: 1;
+        width: 100vw;
+        right: 0;
+        top: 0;
+        overflow-y: scroll;
+        overflow-x: visible;
+        transition: left 0.3s ease,
+        box-shadow 0.3s ease;    
+        height: 100vh;
     }
 
     .dropdown-content a {
@@ -118,15 +169,24 @@
     text-decoration: none;
     display: block;
     width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     }
 
     .dropdown-content a:hover {
     border: 2px solid hsl(0, 0, 100%);
     border-radius: 4px;
+    display: block;
     }
 
     .show {
         display: block;
+    }
+
+    .hide {
+        display: none;
     }
 }
 
