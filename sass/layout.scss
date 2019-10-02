@@ -59,6 +59,10 @@
     margin: 0 auto;
     padding-top: 60px;
 
+    @media only screen and (max-width: 768px) {
+        grid-column-gap: 10px;
+    }
+
     @media only screen and (max-width: 425px) {
         @include flexbox-center-column;
         width: 70%;
@@ -73,6 +77,12 @@
     grid-column-start: 1;
     padding-top: 80px;
 
+    @media only screen and (max-width: 768px) {
+        grid-row-start: 2;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
     @media only screen and (max-width: 425px) {
        text-align: center;
     }
@@ -82,7 +92,6 @@
         font-size: 3.1em;
         width: 70%;
         padding-bottom: .4em;
-
         
     @media only screen and (max-width: 1024px) {
         font-size: 2em;
@@ -107,6 +116,11 @@
 
 .heroimg {
     grid-column-start: 2;
+
+    @media only screen and (max-width: 768px) {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
 
     @media only screen and (max-width: 425px) {
         grid-column-start: 1;
