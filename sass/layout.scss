@@ -60,17 +60,73 @@
     border-color: $soft-red;
 }
 
-.hamburger {
-    display: none;
+// .hamburger {
+//     display: none;
 
-    @media only screen and (max-width: 425px) {
-        display: flex;
-        justify-content: flex-end;
-        padding-left: 100%;
+//     @media only screen and (max-width: 425px) {
+//         display: flex;
+//         justify-content: flex-end;
+//         padding-left: 100%;
+//     }
+
+//     @media only screen and (max-width: 320px){
+//         padding-left: 50%;
+//     }
+// }
+
+//dropdown btn
+.dropbtn {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+@media only screen and (max-width: 425px){ 
+    .dropbtn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
     }
 
-    @media only screen and (max-width: 320px){
-        padding-left: 50%;
+    //dropdown btn on hover & focus maybe add hover....
+    .dropbtn:focus {
+    background-color: $soft-blue;
+    }
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
+
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $soft-blue;
+    color: hsl(0, 0, 100%);
+    z-index: 1;
+    width: 100%;
+    }
+
+    .dropdown-content a {
+    color: hsl(0, 0, 100%);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    }
+
+    .dropdown-content a:hover {
+    border: 2px solid hsl(0, 0, 100%);
+    border-radius: 4px;
+    }
+
+    .show {
+        display: block;
     }
 }
 
@@ -106,7 +162,8 @@
     @media only screen and (max-width: 768px) {
         grid-row-start: 2;
         text-align: center;
-        padding-bottom: 2em;
+        padding-bottom: 1em;
+        padding-top: 60px;
     }
 
     @media only screen and (max-width: 425px) {
@@ -163,11 +220,11 @@
         grid-column-start: 1;
     }
 
-    @media only screen and (max-width: 425px) {
-       img {
-        width: 100%;
-       }
-    }
+        @media only screen and (max-width: 425px) {
+        img {
+            width: 100%;
+            }
+        }
 }
 
 .btn_chrome {
