@@ -1,5 +1,5 @@
 # Frontend Mentor - Bookmark landing page
-#Check it out here https://bookmarkdesign.netlify.com/
+# Check it out here https://bookmarkdesign.netlify.com/
 
 ![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
 
